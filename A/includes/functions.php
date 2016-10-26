@@ -72,7 +72,6 @@ class functions
             $_SESSION['user_lastName']  = $row['lastName'];
             $_SESSION['user_password'] = $row['password'];
             $_SESSION['user_email'] = $row['email'];
-            $_SESSION['user_access'] = $row['access'];
 
             return true; 
         }
@@ -552,27 +551,67 @@ class functions
         }    
     }
 
-    function Upgrade(){
-        if(!$this->DBLogin())
-        {
-            $this->HandleError("Database login failed!");
-            return false;
-        }
-
-        $email = $_SESSION['user_email'];
-        $access = "premium";
-        $insert_query = "update $this->tablename set access='$access' where email='$email'";
-
-        if(!mysql_query( $insert_query ,$this->connection))
-        {
-            $this->HandleDBError("Error inserting data to the table\nquery:$insert_query");
-            return false;
-        }        
-
-        header("Location: http://sulley.cah.ucf.edu/~dig4530c_009/A/premium.php");
-    }
-
     
+	function search($query){
+		if(!$this->DBLogin())
+            {
+                $this->HandleError("Database login failed!");
+                return false;
+            }
+
+		$min_length = 2;
+		// you can set minimum length of the query if you want
+     
+		if(strlen($query) >= $min_length){ // if query length is more or equal minimum length then
+			
+			$query = htmlspecialchars($query); 
+			// changes characters used in html to their equivalents, for example: < to &gt;
+         
+			$query = mysql_real_escape_string($query);
+			// makes sure nobody uses SQL injection
+         
+			$raw_results = mysql_query("SELECT * FROM products
+				WHERE (`productname` LIKE '%".$query."%') OR (`description` LIKE '%".$query."%')") or die(mysql_error());
+             
+			// * means that it selects all fields, you can also write: `id`, `title`, `text`
+         
+			// '%$query%' is what we're looking for, % means anything, for example if $query is Hello
+			// it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
+			// or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
+			
+			if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
+             
+				while($row = mysql_fetch_array($raw_results)){
+				// $row = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
+
+                    echo '<div class="col span_4_of_12">'
+                ,    '<div class="products">'
+                ,    '<a href="singleproduct.php?search=' . $row["sku"] . '">'
+                ,    '<img src="' . $row['image'] . '" height="280" width="280" alt="' . $row['sku'] . '">'
+                ,    '</a>'
+                ,    '</div>'
+                ,    '<div class ="productname" id="productname"><a href="singleproduct.php?search=' . $row["sku"] . '">' . $row['productname'] . '</a></div>'
+                ,    '<div class ="productprice" id="productcat"><a href="singleproduct.php?search=' . $row["sku"] . '">' . $row['category'] . '</a></div>'
+                ,    '<div class ="productprice" id="productprice"><a href="singleproduct.php?search=' . $row["sku"] . '">' . $row['price'] . '</a></div>'
+                ,    '</div>'
+                ;
+
+				}
+             
+			}
+			else{ // if there is no matching rows do following
+				echo '<div class="col span_4_of_12">'
+            ,     '<p>No results</p>'
+            ,     '</div>';
+			}
+         
+		}
+		else{ // if query length is less than minimum
+			echo "Minimum length is ".$min_length;
+		}
+	}
+	
+	
 
     //-------Public Helper functions -------------
     function GetSelfScript()

@@ -18,9 +18,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </head>
-	<body>
-		<div class="dancakes">
-			<div id="sticky" class="section group">
+<body>
+
+<div id="sticky" class="section group">
 				<div class="col span_4_of_12">
 					<div id="logo">
 						<a href='home.php'><img src="img/streamalley_logo.png" height="34" width="220" alt="website logo"></a>
@@ -69,56 +69,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="section group">
-				<div class="col span_12_of_12">
-					<div class="img-wrapper">
-						<div id="heroimage">
-							<img src="img/heroimage3.jpg" alt="hero image">
-						</div>
-						<div class="img-overlay">
-							<a href='shop.php'><button type="button" id="button_id">S H O P&nbsp;<span id="streamicon"><img src="img/favicon.png" height="35" width="35" alt="website logo"></span>&nbsp;N O W</button></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section group" style="padding-top:30px">
-				<div class="col span_1_of_12">
-				</div>
-				<div class="col span_10_of_12">
-					<div id="discount">
-					 	<span id="shopnow">SAVE 25% ON ALL DEVICE ACCESSORIES</span>|&nbsp;&nbsp;S H O P&nbsp;&nbsp;&nbsp;N O W
-					</div>
-				</div>
-				<div class="col span_1_of_12">
-				</div>
-			</div>
+			
+
 			<div class="section group" style="padding-top:50px">
 				<div class="col span_12_of_12">
 					<div class="categories">
-						T O D A Y ' S &nbsp;&nbsp;&nbsp;&nbsp; P I C K S
+						S E A R C H &nbsp;&nbsp;&nbsp;&nbsp; R E S U L T S
 					</div>
 				</div>
 			</div>
 			<div class="section group">
 				<?php
-					$functions->Featured();
+					$query = $_GET['search'];
+				$functions->search($query);
 				?>
 			</div>
-
-			<div class="section group" style="padding-top:150px">
-				<div class="col span_12_of_12">
-					<div class="categories">
-						T O P &nbsp;&nbsp;&nbsp;&nbsp; F A V O R I T E S
-					</div>
-				</div>
-			</div>
-			<div class="section group" style="padding-bottom:100px">
-				<?php
-					$functions->Favorites();
-				?>
-			</div>
-		</div>
-		<footer>
+			
+			<footer>
 				<div class="section group" style="background-color:#eeedea">
 					<div class="col span_4_of_12">
 						<div class="verticalLine">
@@ -180,5 +147,7 @@
 					</div>
 				</div>
 			</footer>
-	</body>
+
+
+</body>
 </html>
