@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
-<title>Stream Alley</title>
+<title>Stream Alley Support - Carmela San Diego</title>
 <link href="css/reset.css" type="text/css" rel="stylesheet">
 <link href="css/styles.css" type="text/css" rel="stylesheet">
 <link rel="icon" href="img/favicon.png" type="image/gif">
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section group" style="padding-top:60px">
+			<div class="section group" style="padding-top:60px;">
 				<div class="col span_12_of_12">
 					<div class="categories">
 						C U S T O M E R&nbsp;&nbsp;&nbsp;&nbsp;S U P P O R T
@@ -69,7 +69,63 @@
 					<hr>
 				</div>
 			</div>
+			<div class="section group" style="padding-top:30px; padding-bottom:60px;">
+				<div class="col span_3_of_12">
+				</div>
+				<div class="col span_3_of_12">
+					<div id="aboutpic">
+						<div id="aboutus">
+						Please contact us for any questions or problems that you have regarding a product or a package that you purchased and we will be happy to entertain you. Answers to general questions can also be found on our <a href='#'><span>FAQ</span></a> page.
+						<br>
+						<br>
+						<div class="contacttitle">
+							LOCATION:
+						</div>
+						<div class="contactdesc">
+							428 Lost Stars Ave. Portland, OR 97204
+						</div>
+						<br>
+						<br>
+						<div class="contacttitle">
+							PHONE NUMBER:
+						</div>
+						<div class="contactdesc">
+							1-866-STREAMALLEY
+						</div>
+						<br>
+						<br>
+						<div class="contacttitle">
+							FOLLOW US
+						</div>
+						<div class="socmediaicons2">
+							<a href='#'><img src="img/facebook.png" height="15" width="15" alt="facebook icon"></a>
+							<a href='#'><img src="img/instagram.png" height="15" width="15" alt="instagram icon"></a>
+							<a href='#'><img src="img/twitter.png" height="15" width="15" alt="twitter icon"></a>
+							<a href='#'><img src="img/pinterest.png" height="15" width="15" alt="pinterest icon"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col span_1_of_12">
+				</div>
+				<div class="col span_4_of_12">
+					<div class="contacttitle">
+						EMAIL US:
+					</div>
+					<form>
+					  <input type="text" name="firstname" placeholder="Name" class="contactemail">
+					  <br>
+					  <input type="text" name="lastname" placeholder="Email" class="contactemail">
+					  <br>
+					  <textarea type="text" name="message" id="contactmessage"></textarea>
+					  <br>
+					  <input type="button" value="Submit" class="allbutton">
+					</form>
+				</div>
+				<div class="col span_1_of_12">
+				</div>
 			</div>
+		</div>
 		<footer>
 				<div class="section group" style="background-color:#eeedea">
 					<div class="col span_4_of_12">
@@ -77,17 +133,17 @@
 								<div class="footertitle">
 									FOLLOW US
 								</div>
-								<div id="socmediaicons">
-									<a href='https://www.facebook.com/' target='_blank'><img src="img/facebook_icon.png" height="25" width="25" alt="facebook icon"></a>
-									<a href='https://www.instagram.com/' target='_blank'><img src="img/instagram_icon.png" height="25" width="25" alt="instagram icon"></a>
-									<a href='https://www.twitter.com/' target='_blank'><img src="img/twitter_icon.png" height="25" width="25" alt="twitter icon"></a>
-									<a href='https://www.pinterest.com/' target='_blank'><img src="img/pinterest_icon.png" height="25" width="25" alt="pinterest icon"></a>
+								<div class="socmediaicons">
+									<a href='#'><img src="img/facebook.png" height="15" width="15" alt="facebook icon"></a>
+									<a href='#'><img src="img/instagram.png" height="15" width="15" alt="instagram icon"></a>
+									<a href='#'><img src="img/twitter.png" height="15" width="15" alt="twitter icon"></a>
+									<a href='#'><img src="img/pinterest.png" height="15" width="15" alt="pinterest icon"></a>
 								</div>
 								<br>
 								<hr>
 								<br>
 								<div id="footeraddress">
-									428 Lost Stars Ave. Portland, OR 97204
+								428 Lost Stars Ave. Portland, OR 97204
 								</div>
 						</div>
 					</div>
@@ -116,11 +172,9 @@
 							<br>
 							<a href='#'>Privacy Policy</a>
 							<br>
-							<a href='#'>Terms of Services</a>
+							<a href='termsofserv.php'>Terms of Services</a>
 							<br>
 							<a href='#'>FAQ</a>
-							<br>
-							<a href='contact.php'>Contact Us</a>
 						</div>
 					</div>
 				</div>

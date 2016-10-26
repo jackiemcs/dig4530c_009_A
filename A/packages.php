@@ -130,11 +130,11 @@
 								<div class="footertitle">
 									FOLLOW US
 								</div>
-								<div id="socmediaicons">
-									<a href='https://www.facebook.com/' target='_blank'><img src="img/facebook_icon.png" height="25" width="25" alt="facebook icon"></a>
-									<a href='https://www.instagram.com/' target='_blank'><img src="img/instagram_icon.png" height="25" width="25" alt="instagram icon"></a>
-									<a href='https://www.twitter.com/' target='_blank'><img src="img/twitter_icon.png" height="25" width="25" alt="twitter icon"></a>
-									<a href='https://www.pinterest.com/' target='_blank'><img src="img/pinterest_icon.png" height="25" width="25" alt="pinterest icon"></a>
+								<div class="socmediaicons">
+									<a href='#'><img src="img/facebook.png" height="15" width="15" alt="facebook icon"></a>
+									<a href='#'><img src="img/instagram.png" height="15" width="15" alt="instagram icon"></a>
+									<a href='#'><img src="img/twitter.png" height="15" width="15" alt="twitter icon"></a>
+									<a href='#'><img src="img/pinterest.png" height="15" width="15" alt="pinterest icon"></a>
 								</div>
 								<br>
 								<hr>
@@ -169,11 +169,9 @@
 							<br>
 							<a href='#'>Privacy Policy</a>
 							<br>
-							<a href='#'>Terms of Services</a>
+							<a href='termsofserv.php'>Terms of Services</a>
 							<br>
 							<a href='#'>FAQ</a>
-							<br>
-							<a href='#'>Contact Us</a>
 						</div>
 					</div>
 				</div>
